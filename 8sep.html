@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Operator Logical Ternary</h1>
+    <script>
+        // Operator logical ternary
+        // Q1 Logical Operators - Predict the output: 
+        console.log(true&&false);   // Ans - False
+        console.log(true || false);  // Ans - True
+        console.log(!false);      // Ans - True
+
+        // Q2 Write a program that checks if a number is between 10 and 50 (both inclusive)
+        // Ans - 
+        let num = 15;
+        if(num > 10 && num < 50){
+            console.log("number is between 10 and 50")   //Ans - number is between 10 and 50
+        }
+
+        // Q3  Check if a student passes only if marks>= 40 and attendance>= 75.
+        // Ans - 
+        let marks = 40
+        let attendance = 75
+
+        if(marks >= 40 && attendance >= 75){
+            console.log("Pass")             //Ans - Pass
+        }
+
+        // Q4  Write a script that prints 'Login successful' only when both username and password are correct. 
+        // Ans - 
+        let userName = "Rohan@123"
+        let password = "Rohan123"
+
+        if(userName == "Rohan@123" && password == "Rohan123"){
+            console.log("Login successful")      //Ans - Login successful
+        }
+
+        // Q5 Predict the result: 
+        let x = 10, y = 5; 
+        console.log(x>5&&y<10); 
+        console.log(x<5 || y<10);      // Ans - true
+
+        // Q6 Ternary Operator - Write a program to check if a number is even or odd using the ternary operator.
+        // Ans - 
+        let number = 4
+        let output = (number % 2 == 0) ? "Even":"Odd" 
+        console.log(output)     //Ans - Even
+
+        // Q7  Use a ternary operator to assign 'Pass' if marks>= 35, otherwise 'Fail'.
+        // Ans - 
+        let Marks = 30
+        let Result = (Marks >= 35) ? "Pass":"Fail"
+        console.log(Result)    //Ans - Fail
+
+        // Q8  Predict the result: 
+        let age = 18; 
+        let result = (age>= 18) ? 'Adult' : 'Minor'; 
+        console.log(result);   //Ans - Adult
+
+        // Q9 Write a program to check if a number is positive, negative, or zero (using nested ternary).
+        // Ans - 
+        let num1 = 8;
+        let checkNumber = (num1 >= 0) ? "Positive" : num1 <=0 ? "Negative" : "Zero"
+        console.log(checkNumber)    //Ans - Positive
+
+        // Q10  Convert this if-else into a ternary statement: if (score>80) { grade = 'A'; } else { grade = 'B'; }
+        // Ans - 
+        let score = 85;
+        let grade = (score>80) ? "grade A" : "grade B"
+        console.log(grade)   //Ans - grade A
+
+    </script>
+</body>
+</html>
