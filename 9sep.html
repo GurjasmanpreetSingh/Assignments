@@ -7,62 +7,103 @@
 </head>
 <body>
     <h1>Assignment 's Questions</h1>
-
-
     <script>
-    // Q1 What is Operator in javaScript
-// Ans1 - Operator in javascript is used to perform operations in the code 
+    // Operator in js
+    // Q1 Arithmetic Operators - Write a program to add, subtract, multiply, and divide two numbers. 
+    // Ans - 
+    let a = 30
+    let b = 20
+    console.log("Add - " + (a + b))        //Ans - 50
+    console.log("Sub - " + (a - b))        //Ans - 10
+    console.log("Multiply - " + (a * b))   //Ans - 600
+    console.log("Divide - " + (a / b))     //Ans - 1.5
 
-// Q2 Write a program to add two numbers.
-// Ans2 - 
-let sum = 2 + 3;
-console.log("Addition = " + sum);
+    // Q2 Predict the result: 
+    // Ans - 
+     console.log(10 + 5 * 2);        //Ans - 20
+     console.log((10 + 5) * 2);      //Ans - 30
 
-// Q3 Use * Operator to multiply two numbers.
-// Ans3 - 
-let num = 2 * 3;
-console.log("Multiplication = "+ num);
+    // Q3 Write a program to find the area of a circle (πr²) using a variable r = 5. 
+    // Ans - 
+    let r = 5
+    let area = (3.14 * r * r)
+    console.log("The area of a circle - " + area)    //Ans - 78.5
 
-// Q4 What is difference between == and === ?
-// Ans4 - 
+    // Q4 Find the remainder when 17 is divided by 3
+    // Ans - 
+    let num = 17
+    let remainder = (num % 3)
+    console.log("Remainder - " + remainder)      //Ans - 2
 
-// Q5 Use the modulo operator(%) to find the remainder of 10/3
-//  Ans5 - 
-let number = 10 % 3;
-console.log("Remainder = " + number);
+    // Q5  If a = 10, what are the values of a++ and ++a?
+    // Ans - 
+    let A = 10
+    console.log("The values of a++ - " + A++)   //Ans - 10
+    console.log("The values of a++ - " + ++A)   //Ans - 11
 
-// Q6 Check if 5 > 2 (true or false?)
-// Ans6 - 
-if(5 > 2){
-    console.log("True");
-} else {
-    console.log("False");
-}
+    // Q6  If let x = 5; x += 3;, what is the value of x? - Write a program using *=, /=, and -= to modify a number. 
+    // Ans - 
+    let x = 5; 
+    x += 3;
+    x *= 3;
+    x /= 3;
+    x -= 3;
+    console.log(x)   //Ans - 5
 
-// Q7 Write a program using assignment operator (=)
-// Ans7 - 
-let a = 7;
-console.log("The value of a is = " + a);
+    // Q7  Predict the result:
+    // Ans -  
+    // let a = 4;
+    // a *= 3 + 2; 
+    // console.log(a); 
 
-// Q8 Use logical AND (&&) in a simple condition.
-// Ans8 - 
-let b = 8 , c = 10;
-if(c > b && b < c){
-    console.log("C is Greater")
-} else{
-    console.log("B is Greater")
-}
-// Q9 Use logical OR (||) in a simple condition.
-// Ans9 - 
-let d = 10 , e = 8;
-if(d > e || e > d){
-    console.log("D is Greater")
-} else{
-    console.log("E is Greater")
-}
+    // Q8 Write a short script that uses += to keep adding 10 to a variable until it reaches 100. 
+    // Ans - 
+    let c = 90;
+    c += 10;
+    console.log(c)
 
-// Q10 What is the result of !true?
-// Ans - The Result of !True is False 
+    // Q9 If let total = 20; total /= 5;, what will be printed?
+    // Ans - 
+    let total = 20;
+    total /= 5;
+    console.log(total);    //Ans - 4
+
+    // Q10  Comparison Operators - What’s the difference between == and ===? Show with examples. 
+    // Ans - (==) in javascript is used to compare the values of 2 variables. 
+    // Example - let a = 10
+              // let b = 10
+            //   Console.log(a == b)  //Ans - True
+
+    // (===) in javascript is used to compare and check if both value and datatype are same.
+    // Example - let a = 20
+            //   let b = "20"
+            // console.log(a===b)    //Ans - False
+    
+    // Q11  Predict the results: 
+    console.log(10>5);     //True
+    console.log(10<5);     //False
+    console.log(10 == '10');   // True
+    console.log(10 === '10');  //False
+    console.log(10 != 8);     //True
+    console.log(10 !== '10'); // True       
+
+    // Q12 Write a program that checks if a number is greater than or equal to 100.
+    // Ans - 
+    let number = 110
+    console.log(number >= 100);       //True
+
+    // Q13  Write a condition that checks if two strings are equal ('hello' and 'Hello').
+    // Ans - 
+    let str1 = 'hello'
+    let str2 = 'Hello'
+    if(str1 === str2){
+        console.log("Two strings are equal")
+    } else{
+        console.log("Two strings are not equal")
+    }
+    
+   
+
 
 
 

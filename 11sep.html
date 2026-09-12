@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Functions Assignment</h1>
+    <script>
+        // Function Assignment
+
+        // Q1. Write a function to print 'Hello World'.
+        // Ans - 
+        function printHello() {
+            console.log("Hello World")
+        }
+        printHello();    //Ans - Hello World
+
+        // Q2 Create a function to add two numbers. 
+        // Ans - 
+        function addNumber() {
+            let a = 10
+            let b = 20
+            let c = (a + b)
+            console.log(c)
+        }
+        addNumber();    //Ans - 30
+
+        // Q3 Write a function to subtract two numbers.
+        // Ans - 
+        function subNumber() {
+            let a = 20
+            let b = 10
+            let c = (a - b)
+            console.log(c)
+        }
+        subNumber()     //Ans - 10
+
+        // Q4  Make a function that multiplies two numbers.
+        // Ans - 
+        function multiNumber() {
+            let a = 20
+            let b = 20
+            let c = (a * b)
+            console.log(c)
+        }
+        multiNumber()   //Ans - 400
+
+        // Q5  Create a function that divides two numbers. 
+        // Ans - 
+        function divideNumber() {
+            let a = 10
+            let b = 5
+            let c = (a / b)
+            console.log(c)
+        }
+        divideNumber()   //Ans - 2
+
+        // Q6 Write a function that takes your name and prints a greeting message.
+        // Ans - 
+        function greetName() {
+            let name = "Rohan@123"
+            console.log("Welcome on this website - " + name)
+        }
+        greetName()       //Ans - Welcome on this website - Rohan@123
+
+        // Q7 . Create a function to find the square of a number.
+        // Ans - 
+        function sqNummber() {
+            let num = 6
+            let sq = (num * num)
+            console.log(sq)
+        }
+        sqNummber()    //Ans - 36
+
+        // Q8 . Write a function to find the cube of a number.
+        //Ans  - 
+        function cubeNumber() {
+            let num = 10
+            let cube = (num * num * num)
+            console.log(cube)
+        }
+        cubeNumber()     //Ans - 1000
+
+        // Q9  Create a function to check whether a number is even or odd. 
+        // Ans - 
+        function checkNum() {
+            let num = 3
+            if (num % 2 == 0) {
+                console.log("Even")
+            } else {
+                console.log("Odd")
+            }
+        }
+
+        checkNum()      //Ans - Odd
+
+
+        // Q10 Write a function to find the largest of two numbers.
+        // Ans - 
+        function largest() {
+            let num1 = 100
+            let num2 = 30
+            if (num1 > num2) {
+                console.log("Largest - " + num1)
+            } else {
+                console.log("Largest - " + num2)
+            }
+        }
+        largest()     //Ans - 100
+
+        // Q11 . Create a function to calculate area of a rectangle (length × width). 
+        //Ans - 
+        function calcArea() {
+            let length = 20
+            let breath = 40
+            let area = (length * breath)
+            console.log("Area of Rectangle is  - " + area)
+        }
+        calcArea()                //Ans - 800
+
+
+        // Q12 -  Write a function to convert Celsius to Fahrenheit.
+        // Ans - 
+        function Temp() {
+            let celsius = 38
+            let Fahrenheit = (celsius * 9 / 5) + 32
+            console.log(Fahrenheit + "F")
+        }
+        Temp()      //Ans - 100.4F
+
+        //Conditional statements if and if else
+
+        // Q1 Basic Level (If Condition) • Write a program to check if a number is positive.
+        // Ans - 
+        function positive() {
+            let a = 10;
+            if (a >= 0) {
+                console.log("Positive")     // Ans - Positive
+
+            }
+        }
+        positive()
+
+        // Q2  Check if a number is greater than 100. 
+        // Ans - 
+        function greater(){
+        let num = 110;
+        if (num > 100) {
+            console.log("Number is Greater than 100")    //Ans - Number is Greater than 100
+        }
+    }
+    greater()
+
+        // Q3 Take a user’s age and print “Eligible to vote” if age ≥ 18. • Check if a given string is not empty. 
+        // Ans - 
+        function Eligible(){
+        let age = 20;
+        if (age >= 18) {
+            console.log("Eligible to vote")         //Ans - Eligible to vote
+        }
+    }
+    Eligible()
+
+        // Q4 Check if a variable marks is greater than 35, then print “Pass”
+        // Ans - 
+        function studentPass(){
+        let marks = 36;
+        if (marks > 35) {
+            console.log("Pass")   //Ans - Pass
+        }
+    }
+    studentPass()
+
+        // Q5 If-Else Practice Questions • Write a program to check if a number is even or odd.
+        // Ans - 
+        function checkNum(){
+        let num1 = 10;
+        if (num1 % 2 == 0) {
+            console.log("Even")
+        } else {
+            console.log("Odd")     //Ans - Even
+        }
+    }
+    checkNum()
+
+        // Q6 Take a temperature value — if it’s above 30 print “Hot”, else print “Cool”
+        // Ans - 
+        function checkTemp(){
+        let temp = 29;
+        if (temp > 30) {
+            console.log("Hot")
+        } else {
+            console.log("Cold")   //Ans - Cold
+        }
+    }
+    checkTemp()
+
+        // Q7 Check if a given number is divisible by 5 — if not, print “Not Divisible”
+        function divisible(){
+        let no = 25;
+        if (no % 5 == 0) {
+            console.log("Divisible")
+        } else {
+            console.log("Not Divisible")     //Ans - Divisible
+        }
+    }
+    divisible()
+
+        // Q8 If a person’s age is ≥ 18 print “Adult”, else “Minor”. 
+        // Ans - 
+        function personAge(){
+        let personAge = 25;
+        if (personAge >= 18) {
+            console.log("Adult")
+
+        } else {
+            console.log("Minor")         //Ans - Adult
+        }
+    }
+    personAge()
+
+        // Q9 If a string is 'JavaScript', print “Correct language!”, else print “Try again!”
+        // Ans - 
+        function str(){
+        let String = 'JavaScript'
+
+        if (String == 'JavaScript') {
+            console.log("Correct language!")
+        } else {
+            console.log("Try again")      //Ans - Correct language!
+        }
+    }
+    str()
+
+        // Q10 Mini Practice Challenges • Write a program to find the largest of two numbers using if-else. 
+        // Ans - 
+        function larger(){
+        let n = 5
+        let m = 14
+        if (n > m) {
+            console.log("N is Largest")
+        } else {
+            console.log("M is Largest")       //Ans - M is Largest
+        }
+    }
+    larger()
+
+        // Q11 Take a year and check whether it’s a leap year. 
+        // Ans - 
+        function leapYear(){
+        let year = 2004
+        if (year % 4 == 0) {
+            console.log("Leap Year")     //Ans - Leap Year
+        }
+    }
+    leapYear()
+
+
+        // Q12  Check if a number is divisible by both 3 and 5
+        function Divisibl(){
+        let g = 60;
+        if (g % 3 == 0 && g % 5 == 0) {
+            console.log("Number is Divisible")
+        } else {
+            console.log("Number is not divisible")     //Ans - Number is Divisible
+        }
+    }
+    Divisibl()
+
+        // Q13  Take user input for username and password and print “Login Successful” if both match.
+        function login(){
+        let username = "Gurjas"
+        let password = 123;
+        if (username === "Gurjas" && password === 123) {
+            console.log("Login Successful")       //Ans - Login Successful
+        }
+    }
+    login()
+
+    </script>
+</body>
+
+</html>
