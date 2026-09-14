@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions Assignment</h1>
+    <script>
+    //JavaScript Functions – Assignment 20 Practice Questions
+    // A. Simple Functions
+    // Q1 - Create a function greet() that prints "Hello, Welcome to JavaScript!".
+    // Ans - 
+    function greet(){
+        console.log("Hello, Welcome to JavaScript!")
+    }
+    greet();      //Ans - Hello, Welcome to JavaScript!
+
+    // Q2 - Create a function welcome() that prints your name, course, and institute name.
+    // Ans - 
+    function welcome(){
+        console.log("Name - Gurjasmanpreet Singh")
+        console.log("Course - MERN Stack")
+        console.log("Institute - Excellence Technology")
+    }
+    welcome()     //Ans - Name - Gurjasmanpreet Singh
+                    //  Course - MERN Stack
+                    // Institute - Excellence Technology
+
+    // Q5 - Create a function calculate() that prints the result of 10 + 20.
+    // Ans - 
+    function calculate(){
+        let a = 10
+        let b = 20
+        sum = (a + b)
+        console.log(sum)
+    }
+    calculate()       //Ans - 30
+
+    // B. Functions with Parameters&Arguments
+    // Q6 - Create a function greetUser(name) that accepts a name as a parameter and prints a greeting.
+    // Ans - 
+    function greetUser(name){
+        console.log("Hello " + name)
+        
+    }
+    greetUser("Gurjasmanpreet Singh!")     //Ans - Hello Gurjasmanpreet Singh!
+    greetUser("Rohit!")                    //Ans - Hello Rohit!
+
+    // Q7 - Create a function add(a, b) that accepts two numbers and prints their sum
+    // Ans - 
+    function add(a, b){
+        sum = (a + b)
+        console.log(sum)
+    }
+    add(5,5);              //Ans - 10
+    add(10,20);            //Ans - 30
+
+    // Q8 - Create a function subtract(a, b) that accepts two numbers and returns their difference
+    // Ans - 
+    function subtract(a, b){
+        sub = (a - b)
+        console.log(sub)
+    }
+    subtract(10,7);     //Ans - 3
+    subtract(50,25);    //Ans - 25
+
+    // Q9 - Create a function multiply(a, b) that accepts two numbers and prints their multiplication.
+    // Ans - 
+    function multiply(a,b){
+        multi = (a * b)
+        console.log(multi)
+    }
+    multiply(10,10)         //Ans - 100
+    multiply(20,20)         //Ans - 400
+
+    // Q10 - Create a function divide(a, b) that accepts two numbers and returns their division.
+    // Ans - 
+    function divide(a,b){
+        div = (a / b)
+        console.log(div)
+    } 
+    divide(64,8)              //Ans - 8
+    divide(40,8)              //Ans - 5
+
+    // Q11 - Create a function square(num) that accepts a number and returns its square.
+    // Ans - 
+    function square(num){
+        num = (num * num)
+        console.log(num)
+    }
+    square(9)            //Ans - 81
+    square(12)            //Ans - 144
+
+    // Q12 - Create a function checkEvenOdd(num) that accepts a number and prints whether it is Even or Odd.
+    // Ans - 
+    function checkEvenOdd(num){
+        if(num % 2 == 0){
+            console.log("Even")
+        } else {
+            console.log("Odd")
+        }
+    }
+    checkEvenOdd(8)       //Ans - Even
+    checkEvenOdd(9)       //Ans - Odd
+
+    // Q13 - 	Create a function findLargest(a, b) that accepts two numbers and prints the larger number.
+    // Ans - 
+    function findLargest(a, b){
+        if(a>b){
+            console.log("Largest A - "+ a)
+        } else{
+            console.log("Largest B - "+ b)
+        }
+    }
+    findLargest(100,20)                  //Ans - Largest A
+    findLargest(10,30)                   //Ans - Largest B
+
+    // Q14 - Create a function student(name, age, course) that accepts three arguments and prints the student’s details.
+    // Ans - 
+    function student(name, age, course){
+        console.log("Student Name - "+name)
+        console.log("Student age - "+age)
+        console.log("Student course - "+course)
+    }
+    student("Gurjasmanpreet",22,"Full-Stack Developer")  
+    student("Rohan",24,"MERN Stack")
+
+    // Q15 - Create a function calculateMarks(m1, m2, m3) that accepts marks of three subjects and returns the total marks.
+    // Ans - 
+    function calculateMarks(m1, m2, m3){
+        total = (m1 + m2 + m3)
+        console.log(total)
+    }
+    calculateMarks(80,50,50)     //Ans - 180
+    calculateMarks(80,40,90)     //Ans - 210
+    // C. Arrow Functions
+    // Q16 - Create an arrow function greet that prints "Hello JavaScript"
+    // Ans - 
+    newGreet=()=>{
+        console.log("Hello JavaScript")
+    }
+    newGreet()      //Ans - Hello JavaScript
+
+    // Q17 - Create an arrow function add(a, b) that returns the sum of two numbers.
+    // Ans - 
+    add=(a,b)=>{
+        sum = (a + b)
+        console.log(sum)
+    }
+    add(2,3)     //Ans - 5
+
+    // Q18 - Create an arrow function square(num) that returns the square of a number.
+    // Ans - 
+    square=(num)=>{
+        num = (num * num)
+        console.log(num)
+    }
+    square(15)         //Ans - 225
+
+    // Q19 - Create an arrow function checkAge(age) that checks whether a person is 18 or older and prints "Eligible" or "Not Eligible".
+    // Ans - 
+    checkAge=(age)=>{
+      if(age>=18){
+        console.log("Eligible")
+      } else{
+        console.log("Not Eligible")
+      }
+    }
+    checkAge(20)              //Ans - "Eligible"
+
+    // Q20 - Create an arrow function calculateBill(price, quantity) that calculates and returns the total bill.
+    // Ans - 
+    calculateBill=(price, quantity)=>{
+        total = (price * quantity)
+        console.log(total)
+    }
+    calculateBill(150,3)         //Ans - 450
+
+
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>
