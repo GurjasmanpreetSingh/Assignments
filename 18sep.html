@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Assignment - Functons with return type</h1>
+    <script>
+        // JavaScript Assignment — Functions with Return Value
+
+        // Q1 - Create a function add(a, b) that accepts two numbers and returns their sum
+        // Ans - 
+        function add(a,b){
+            sum = (a + b)
+            return sum
+        }
+        
+        result = add(10,20)
+        console.log(result);         //Ans - 30
+
+
+        // Q2 - Create a function subtract(a, b) that accepts two numbers and returns the result of subtraction.
+        // Ans - 
+        function sub(a,b){
+            sum = (a - b)
+            return sum
+        }
+        
+        result = sub(30,10)
+        console.log(result)        //Ans - 20
+
+
+        // Q3 - Create a function multiply(a, b) that accepts two numbers and returns their multiplication.
+        // Ans - 
+        function multiply(a,b){
+            multi = (a * b)
+            return multi
+        }
+        result = multiply(10,10)
+        console.log(result)            //Ans - 100
+
+        // Q4 - Create a function divide(a, b) that accepts two numbers and returns their division result.
+        // Ans - 
+        function divide(a,b){
+            div = (a / b)
+            return div
+        }
+
+        result = divide(50,2)
+        console.log(result)      //Ans - 25
+
+        // Q5 - Create a function square(num) that accepts a number and returns its square.
+        // Ans - 
+        function square(num){
+            sq = (num * num)
+            return sq
+        }
+
+        result = square(13)
+        console.log(result)      //Ans - 169
+
+        // Q6 - Create a function cube(num) that accepts a number and returns its cube
+        // Ans - 
+        function cube(num){
+            cb = (num * num * num)
+            return cb
+        }
+        result = cube(5)
+        console.log(result)     //Ans - 125
+
+        // Q7 - Create a function checkEvenOdd(num) that returns "Even" if the number is even and "Odd" if the number is odd.
+        // Ans - 
+        function checkEvenOdd(num){
+            if(num % 2 == 0){
+                return "Even"
+            } else{
+                return "Odd"
+            }
+        }
+        result = checkEvenOdd(5)
+        console.log(result)     //Ans - Odd
+
+        // Q8 - Create a function findGreater(a, b) that accepts two numbers and returns the greater number.
+        // Ans - 
+        function findGreater(a, b){
+            if(a>b){
+                return "A is Greatest"
+            } else{
+                return "B is Greatest" 
+            }
+        }
+        result = findGreater(100,30)
+        console.log(result)    //Ans - A is Greatest
+
+        // Q9 - Create a function checkNumber(num) that returns "Positive" if the number is greater than 0, "Negative" if it is less than 0, and "Zero" if it is 0.
+        // Ans - 
+        function checkNumber(num){
+            if(num > 0){
+                return "Postive"
+            } else if(num < 0){
+                return "Negative"
+            } else{
+                return "Zero"
+            }
+        }
+
+        result = checkNumber(10)
+        console.log(result)       //Ans - Postive 
+
+        // Q10 - Create a function calculatePercentage(obtained, total) that returns the percentage of marks.
+        // Ans - 
+        function calculatePercentage(obtained, total){
+            sum = (obtained / total * 100 + "%" )
+            return sum 
+        }
+        result = calculatePercentage(250, 500)
+        console.log(result)       //Ans - 50%
+
+        // Q11 - Create a function calculateDiscount(price, discount) that accepts price and discount percentage and returns the discount amount
+        // Ans - 
+        function calculateDiscount(price, discount){
+            sum = ((discount / 100) * price)
+            return sum 
+        }
+
+        result = calculateDiscount(100,10)
+        console.log(result)          //Ans - 10
+
+        // Q12 - Create a function finalPrice(price, discount) that returns the price after applying the discount.
+        // Ans - 
+        function finalPrice(price, discount){
+            sum = (price * (discount / 100))
+            final = price - sum
+            return final
+        }
+        result = finalPrice(1000,10)
+        console.log(result)         //Ans - 900
+
+        // Q13 - Create a function celsiusToFahrenheit(celsius) that converts Celsius into Fahrenheit and returns the result
+        // Ans - 
+        function celsiusToFahrenheit(celsius){
+            convert = (celsius * 9/5) + 32
+            return convert
+        }
+
+        result = celsiusToFahrenheit(38)
+        console.log(result)           //Ans - 100.4
+
+        // Q14 - Create a function calculateAge(birthYear, currentYear) that returns the person's age.
+        // Ans - 
+        function calculateAge(birthYear, currentYear){
+            age = currentYear - birthYear
+            return age
+        }
+
+        result = calculateAge(2000,2026)
+        console.log(result)                    //Ans - 26
+
+        // Q15 - Create a function getGrade(marks) that returns: 90–100 → "A", 80–89 → "B", 70–79 → "C", 60–69 → "D", Below 60 → "F".
+        // Ans - 
+        function getGrade(marks){
+            if(marks <= 100 && marks >= 90){
+                return "A"
+            } else if(marks<=89 && marks >=80){
+                return "B"
+            } else if(marks<=79 && marks >=70){
+                return "C"
+            } else if(marks<=69 && marks >=60){
+                return "D"
+            } else{
+                return "F"
+            }
+        }
+
+        result = getGrade(65)
+        console.log(result)         //Ans - D
+     
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
