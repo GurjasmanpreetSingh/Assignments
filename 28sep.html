@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 id="heading"></h1>
+    <p id="description"></p>
+    <button onclick="update()">Update Content</button> -->
+
+
+    <!-- <p>Hello 1</p>
+    <p>Hello 2</p>
+    <p>Hello 3</p>
+    <p>Hello 4</p>
+    <p>Hello 5</p>
+    <button onclick="highlight()">Highlight Paragraphs</button> -->
+
+    <!-- <h2 class="student">Student 1</h2>
+    <h2 class="student">Student 2</h2>
+    <h2 class="student">Student 3</h2>
+    <h2 class="student">Student 4</h2>
+    <button onclick="update()">Update Students</button> -->
+
+    <!-- <div id="result"></div>
+    <button onclick="showText()">Show Text</button>
+    <button onclick="showHTML()">Show HTML</button> -->
+
+    <h1 id="title">Student Result</h1>
+
+    <div class="student">
+        <p>Name: Amit</p>
+        <p>Subject: JavaScript</p>
+        <p>Marks: 72</p>
+    </div>
+
+    <div class="student">
+        <p>Name: Priya</p>
+        <p>Subject: JavaScript</p>
+        <p>Marks: 88</p>
+    </div>
+
+    <button onclick="updateResult()">Update Result</button>
+
+
+    <script>
+        // JavaScript DOM Practical Assignment
+        // Question 1 —
+        // getElementById() — 8 Marks Create a webpage containing: An <h1> with the ID heading A paragraph with the ID description A button named Update Content When the button is clicked: Change the heading text to "JavaScript DOM Manipulation". Change the paragraph text to "We are learning DOM methods in JavaScript." Use getElementById() for both elements. Use innerText to update the content.
+
+        // Ans -
+        // function update() {
+        //     document.getElementById("heading").innerHTML = "JavaScript DOM Manipulation"
+        //     document.getElementById("description").innerHTML = "We are learning DOM methods in JavaScript."
+        // }
+
+        // Question 2 — getElementsByTagName() — 8 Marks Create a webpage containing five <p> elements with different text. Add a button "Highlight Paragraphs". When the button is clicked: Select all <p> elements using getElementsByTagName(). Change the text of every paragraph to "Paragraph updated successfully!" Change the background color of every paragraph to light yellow. Use a loop to process all paragraph elements.
+
+        // Ans -
+        // function highlight() {
+        //     let paragraphs = document.getElementsByTagName("p");
+
+        //     for (let i = 0; i < paragraphs.length; i++) {
+        //         paragraphs[i].innerText = "Paragraph updated successfully!";
+        //         paragraphs[i].style.backgroundColor = "lightyellow";
+        //     }
+        // }
+
+        // Question 3 — getElementsByClassName() — 8 Marks Create a webpage containing: <h2 class="student">Student 1</h2> <h2 class="student">Student 2</h2> <h2 class="student">Student 3</h2> <h2 class="student">Student 4</h2> Add a button "Update Students". When clicked: Select all elements having the class student. Use getElementsByClassName(). Change their text to: Student 1 - Present Student 2 - Present Student 3 - Present Student 4 - Present Change their text color to green.
+        // Ans -
+        // function update(){
+        //    let students =  document.getElementsByClassName("student")
+        //    for(let i = 0; i < students.length; i++){
+        //     students[i].innerText = "Student " + (i + 1) + " - Present";
+        //     students[i].style.color = "green"
+        //    }
+        // }
+
+        // Question 4 — innerText and innerHTML — 8 Marks Create a webpage with: <div id="result"></div> <button onclick="showText()">Show Text</button> <button onclick="showHTML()">Show HTML</button> Write two functions: showText() Use innerText to display: Welcome to JavaScript DOM This content is added using innerText. showHTML() Use innerHTML to display: A heading <h2> A paragraph <p> A bold <strong> statement An unordered list containing three items The final output should contain properly formatted HTML elements.
+        // Ans - 
+        // function showText() {
+        //     document.getElementById("result").innerText = "Welcome to JavaScript DOM  \n This content is added using innerText."
+        // }
+
+        // function showHTML() {
+        //     document.getElementById("result").innerHTML = "<h2> Hello Javacript </h2>" + "<p> This is paragraph of DOM </p>" + "<strong> DOM is Part of Javascript </strong>" + "<ul> <li> JavaScript</li>" + "<li> DOM</li>" + "<li> Document Object Model</li> </ul>"
+        // }
+
+        // Question 5 — Combined DOM Practical — 8 Marks Create a Student Result Page containing: <h1 id="title">Student Result</h1> <div class="student"> <p>Name: Amit</p> <p>Subject: JavaScript</p> <p>Marks: 72</p> </div> <div class="student"> <p>Name: Priya</p> <p>Subject: JavaScript</p> <p>Marks: 88</p> </div> <button onclick="updateResult()">Update Result</button> Write the updateResult() function with the following requirements: Use getElementById() to change the <h1> text. Use getElementsByClassName() to select both .student elements. Use getElementsByTagName() to select all <p> elements. Use innerText to modify at least two elements. Use innerHTML to add a Result: Pass message inside the student information. Use a loop wherever multiple elements need to be modified. Marks Distribution Question Topic Marks 1 getElementById() + innerText 8 2 getElementsByTagName() 8 3 getElementsByClassName() 8 4 innerText + innerHTML 8 5 Combined DOM manipulation 8 Total 40
+        // Ans -
+        function updateResult() {
+            document.getElementById("title").innerText = "Final 2 Student Result"
+            let students = document.getElementsByClassName("student")
+            let paras = document.getElementsByTagName("p")
+            paras[0].innerText = "Name: Amit Verma"
+            paras[2].innerText = "Marks: 90"
+            for (let i = 0; i < students.length; i++) {
+                students[i].innerHTML += "<p>Result: Pass</p>";
+            }
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
