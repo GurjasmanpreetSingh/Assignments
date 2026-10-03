@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JAVASCRIPT PRACTICAL ASSIGNMENT</h1>
+
+    <script>
+        // JAVASCRIPT PRACTICAL ASSIGNMENT
+        // Question 1 — Basic Async Function
+        // Create an asynchronous function named welcomeUser().
+
+        // The function should wait for 2 seconds and then return the following message:
+
+        // Welcome to JavaScript Async/Await!
+
+        // Ans - 
+
+        async function welcomeUser() {
+            await setTimeout(() => {
+                console.log("Welcome to JavaScript Async/Await!")
+            }, 2000)
+        }
+        welcomeUser()
+
+
+        // Question 2 — Promise with Async/Await
+        // Create a function named getMessage() that returns a Promise.
+
+        // The Promise should resolve after 2 seconds with the following message:
+
+        // Data received successfully
+
+        // Ans -
+
+
+
+        // Question 3 — Get User Data
+        // Create an asynchronous function named getUser().
+
+        // Use a Promise to return the following user information after 2 seconds:
+
+        // Name: Amit
+        // Age: 22
+        // City: Chandigarh
+
+        // Ans -
+
+
+        // Question 4 — Fetch Data from API
+        // Create an asynchronous function that uses fetch() to get users from the following API:
+
+        // https://jsonplaceholder.typicode.com/users
+
+        // Ans - 
+        // async function getUsers() {
+        //     let user = await fetch("https://jsonplaceholder.typicode.com/users")
+        //     let data = await user.json()
+        //     console.log(data)
+        // }
+        // getUsers()
+
+        // Question 5 — Error Handling
+        // Create an asynchronous function that makes a request to an invalid API URL.
+
+        // Use try...catch to handle the error.
+
+        // If the request fails, display the following message:
+
+        // Something went wrong
+
+        // Ans - 
+        // async function getUsers() {
+        //     try {
+        //         let user = await fetch("https://jsonplaceholder.typi.com/users")
+        //         let data = await user.json()
+        //         console.log(data)
+        //     } catch (err) {
+        //         console.log("Something went wrong")
+        //     }
+
+        // }
+        // getUsers();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

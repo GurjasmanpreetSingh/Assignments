@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "DS-DIGIB";
+            src: url("fonts/DS-DIGIB.TTF") format("truetype");
+        }
+        .clock {
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            width: 250px;
+            justify-self: center;
+            align-items: center;
+            border: 7px solid blue;
+            font-size: 20px;
+            background-color: black;
+            color: blue;
+            border-radius: 10%;
+            font-weight: bold;
+            font-size: 40px;
+            font-family: "DS-DIGIB";
+            font-weight: bold;
+
+        }
+        .outer{
+            display:flex ;
+            justify-self: center;
+            height: 150px;
+            width: 250px;
+            border: 5px solid blue;
+            padding: 10px;
+            background-color: blanchedalmond;
+            padding-top: 40px;
+        
+        }
+        
+
+        h1 {
+            justify-self: center;
+            color: blue;
+            font-size: 50px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digital Clock</h1>
+    <div class="outer">
+        
+    <div class="clock">
+        <p id="para"></p>
+    </div>
+    </div>
+
+    <script>
+        setInterval(() => {
+            date = new Date()
+            clock = document.getElementById("para")
+            hours = date.getHours() % 12;
+            min = date.getMinutes()
+            second = date.getSeconds()
+            clock.innerText = hours + " : " + min + " : " + second;
+
+        }, 1000)
+    </script>
+</body>
+
+</html>
