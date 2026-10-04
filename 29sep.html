@@ -2,66 +2,317 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <style>
+        h1 {
+            justify-self: center;
+        }
+
+        .main {
+            height: 495px;
+            width: 290px;
+            border: 2px solid black;
+            border-radius: 15px;
+            justify-self: center;
+            background-color: rgb(5, 66, 110);
+        }
+
+        .input {
+            height: 45px;
+            width: 190px;
+            border: 2px solid white;
+            background-color: white;
+            justify-self: center;
+            margin: 20px;
+            border-radius: 7px;
+            /* text-align: right;
+            padding: 4px; */
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            padding: 0 10px;
+            font-size: 20px;
+
+        }
+
+        .keys {
+            justify-content: center;
+            /* padding-top: 12px; */
+            text-align: center;
+            height: 50px;
+            width: 50px;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 7px;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .key1 {
+            justify-content: center;
+            /* padding-top: 12px; */
+            text-align: center;
+            height: 50px;
+            width: 120px;
+            border: 2px solid white;
+            background-color: white;
+            border-radius: 7px;
+            font-size: 20px;
+            margin: 10px;
+
+
+        }
+
+        .keys-container {
+            display: inline-grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 5px;
+            /* padding: 20px; */
+            margin: 10px;
+            justify-content: center;
+        }
+
+    
+    </style>
 </head>
 
 <body>
-    <h1>DOM Project based task</h1>
+  <h1>DOM Project based task</h1>
 
-    <h3> Simple Calculator</h3>
-    <input type="number" placeholder="Enter First Number" id="num1">
-    <br>
-    <br>
-    <input type="number" placeholder="Enter Second Number" id="num2">
-    <br>
-    <br>
-    <button onclick="add()">+</button>
-    <button onclick="sub()">-</button>
-    <button onclick="multiply()">*</button>
-    <button onclick="divide()">/</button>
-    <br>
-    <br>
-    <button onclick="result()">Result</button>
+  <h3> Simple Calculator</h3>
+  <input type="number" placeholder="Enter First Number" id="num1">
+  <br>
+  <br>
+  <input type="number" placeholder="Enter Second Number" id="num2">
+  <br>
+  <br>
+  <button onclick="add()">+</button>
+  <button onclick="sub()">-</button>
+  <button onclick="multiply()">*</button>
+  <button onclick="divide()">/</button>
+  <br>
+  <br>
+  <!-- <button onclick="result()">Result</button> -->
 
-    <p id="result"></p>
-    <script>
-        // DOM Project based task
-        // Qus 1. Create a simple calculator using HTML, CSS, and JavaScript. Add two input fields for taking two numbers as input. Create four buttons — Add, Subtract, Multiply, and Divide. When the user clicks any button, perform the corresponding operation on the two input values and display the result below the buttons. 
-        // Ans - 
-        function add() {
-          let num1 = +document.getElementById("num1").value
-          let num2 = +document.getElementById("num2").value
-          let result = num1 + num2;
-          document.getElementById("result").innerHTML = result
-             
-        }
-        function sub() {
-          let num1 = +document.getElementById("num1").value
-          let num2 = +document.getElementById("num2").value
-          let result = num1 - num2;
-          document.getElementById("result").innerHTML = result
-             
-        }
-        function multiply() {
-          let num1 = +document.getElementById("num1").value
-          let num2 = +document.getElementById("num2").value
-          let result = num1 * num2;
-          document.getElementById("result").innerHTML = result
-             
-        }
-        function divide() {
-          let num1 = +document.getElementById("num1").value
-          let num2 = +document.getElementById("num2").value
-          let result = num1 / num2;
-          document.getElementById("result").innerHTML = result
-             
-        }
+  <p id="result"></p>
 
-    </script>
+
+
+  <input type="text" id="value" placeholder="Enter any value">
+
+  <button onclick="checkValue()">Check</button>
+
+  <p id="result"></p>
+  <br>
+  <br>
+
+
+  <input type="text" placeholder=" Enter Name">
+  <br><br>
+  <input type="email" placeholder=" Enter Email">
+  <br><br>
+  <input type="password" id="password" placeholder=" Enter Password">
+  <br><br>
+  <input type="password" id="confirmPassword" placeholder=" Enter Confirm Password">
+  <br><br>
+  <input type="number" placeholder=" Enter Phone Number">
+  <br><br>
+  <button onclick="submit()">Submit</button>
+  <p id="para"></p>
+
+
+  <h1>Fully Functional Calculator</h1>
+    <div class="main">
+        <div class="input">
+            
+        </div>
+        <div class="keys-container">
+            <button class="keys" style="color: red;">AC</button>
+            <button class="keys" style="color: red;">DE</button>
+            <button class="keys" style="color: red;">.</button>
+            <button class="keys" style="color: red;">/</button>
+            <button class="keys">7</button>
+            <button class="keys">8</button>
+            <button class="keys">9</button>
+            <button class="keys" style="color: red;">*</button>
+            <button class="keys">4</button>
+            <button class="keys">5</button>
+            <button class="keys">6</button>
+            <button class="keys" style="color: red;">-</button>
+            <button class="keys">1</button>
+            <button class="keys">2</button>
+            <button class="keys">3</button>
+            <button class="keys" style="color: red;">+</button>
+            <button class="keys">00</button>
+            <button class="keys">0</button>
+            <button class="key1" style="color: red;">=</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+  <script>
+    // DOM Project based task
+    // Qus 1. Create a simple calculator using HTML, CSS, and JavaScript. Add two input fields for taking two numbers as input. Create four buttons — Add, Subtract, Multiply, and Divide. When the user clicks any button, perform the corresponding operation on the two input values and display the result below the buttons. 
+    // Ans - 
+    function add() {
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+
+      let result = num1 + num2;
+
+      document.getElementById("result").innerText = result
+
+    }
+    function sub() {
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+
+      let result = num1 - num2;
+
+      document.getElementById("result").innerText = result
+
+    }
+    function multiply() {
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+
+      let result = num1 * num2;
+
+      document.getElementById("result").innerText = result
+
+    }
+    function divide() {
+      let num1 = Number(document.getElementById("num1").value);
+      let num2 = Number(document.getElementById("num2").value);
+
+      let result = num1 / num2;
+
+      document.getElementById("result").innerText = result
+
+    }
+
+    // Q2. Check Number or String
+
+    // Create an input field where the user can enter any value.
+
+    // Add a button.
+    // When the user clicks the button, check whether the entered value is a number or a string.
+    // Display the result on the webpage.
+
+    // Ans - 
+    function checkValue() {
+      let enterValue = document.getElementById("value").value
+      if (enterValue === "") {
+        document.getElementById("result").innerText = "Please enter a value";
+      } else if (isNaN(enterValue)) {
+        document.getElementById("result").innerText = "It is a string";
+      } else {
+        document.getElementById("result").innerText = "It is a number"
+      }
+    }
+
+
+    // Q3. Password Matching Form
+
+    // Create a registration form with the following input fields:
+
+    // Name
+    // Email
+    // Password
+    // Confirm Password
+    // Phone Number
+
+    // Add a Submit button.
+
+    // When the user clicks the Submit button:
+    // Compare the Password and Confirm Password values.
+    // If they are the same, display:
+    // "Password matched"
+    // If they are different, display:
+    // "Password does not match"
+
+    // Display the appropriate message on the webpage.
+
+    // Ans - 
+    function submit() {
+      let password = document.getElementById("password").value
+      let confirmPassword = document.getElementById("confirmPassword").value
+      if (password === confirmPassword) {
+        document.getElementById("para").innerText = "Password matched"
+      } else {
+        document.getElementById("para").innerText = "Password does not match"
+      }
+
+    }
+
+    // Q4. Image Slider
+
+    // Create an image slider using HTML, CSS, and JavaScript.
+
+    // Display one image at a time.
+    // Add two buttons:
+    // Previous
+    // Next
+    // When the user clicks Next, display the next image.
+    // When the user clicks Previous, display the previous image.
+    // The slider should be continuous:
+    // After the last image, clicking Next should display the first image.
+    // On the first image, clicking Previous should display the last image.
+
+    // Ans - 
+
+
+    // Q5. Fully Functional Calculator
+
+    // Create a fully functional calculator using HTML, CSS, and JavaScript.
+
+    // The calculator should support basic mathematical operations such as:
+
+    // Addition
+    // Subtraction
+    // Multiplication
+    // Division
+
+    // The calculator should have a user-friendly interface and should perform calculations correctly.
+
+    // Ans -
+    function 
+
+    // Q6. YouTube Video Search Bar
+
+    // Create a YouTube video search bar using HTML, CSS, and JavaScript.
+
+    // The search interface should contain:
+
+    // One input field where the user can enter a keyword.
+    // One Search button.
+
+    // When the user enters a keyword and clicks the Search button, perform a YouTube video search based on the entered keyword.
+
+    // Q7. To-Do List
+
+    // Create a fully functional To-Do List using HTML, CSS, and JavaScript.
+
+    // The To-Do List should allow users to:
+
+    // Add tasks
+    // Edit tasks
+    // Delete tasks
+
+    // The tasks should be displayed clearly on the webpage, and the user should be able to manage them easily.
+
+
+  </script>
 </body>
 
 </html>
-
-
