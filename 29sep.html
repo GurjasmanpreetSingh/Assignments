@@ -5,78 +5,79 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-   <style>
-        h1 {
-            justify-self: center;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
         }
 
-        .main {
-            height: 495px;
-            width: 290px;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .calculator {
+            width: 300px;
+            padding: 20px;
+            margin: auto;
+            background-color: rgb(5, 66, 110);
             border: 2px solid black;
             border-radius: 15px;
-            justify-self: center;
-            background-color: rgb(5, 66, 110);
         }
 
-        .input {
-            height: 45px;
-            width: 190px;
-            border: 2px solid white;
+        .display {
+            width: 100%;
+            height: 55px;
+
+            border: none;
+            border-radius: 8px;
+
             background-color: white;
-            justify-self: center;
-            margin: 20px;
-            border-radius: 7px;
-            /* text-align: right;
-            padding: 4px; */
 
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
+            text-align: right;
+            padding: 5px 10px;
 
-            padding: 0 10px;
-            font-size: 20px;
-
+            font-size: 25px;
+            margin-bottom: 20px;
         }
 
         .keys {
-            justify-content: center;
-            /* padding-top: 12px; */
-            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .keys input {
             height: 50px;
-            width: 50px;
             border: 2px solid white;
-            background-color: white;
             border-radius: 7px;
-            font-size: 20px;
-            margin: 10px;
-        }
 
-        .key1 {
-            justify-content: center;
-            /* padding-top: 12px; */
-            text-align: center;
-            height: 50px;
-            width: 120px;
-            border: 2px solid white;
             background-color: white;
-            border-radius: 7px;
+
             font-size: 20px;
-            margin: 10px;
-
-
+            cursor: pointer;
         }
 
-        .keys-container {
-            display: inline-grid;
-            grid-template-columns: repeat(4, 60px);
-            gap: 5px;
-            /* padding: 20px; */
-            margin: 10px;
-            justify-content: center;
+        .keys input:hover {
+            background-color: #dddddd;
         }
 
-    
+        .equal {
+            grid-column: span 2;
+        }
     </style>
 </head>
 
@@ -126,34 +127,66 @@
 
 
   <h1>Fully Functional Calculator</h1>
-    <div class="main">
-        <div class="input">
-            
-        </div>
-        <div class="keys-container">
-            <button class="keys" style="color: red;">AC</button>
-            <button class="keys" style="color: red;">DE</button>
-            <button class="keys" style="color: red;">.</button>
-            <button class="keys" style="color: red;">/</button>
-            <button class="keys">7</button>
-            <button class="keys">8</button>
-            <button class="keys">9</button>
-            <button class="keys" style="color: red;">*</button>
-            <button class="keys">4</button>
-            <button class="keys">5</button>
-            <button class="keys">6</button>
-            <button class="keys" style="color: red;">-</button>
-            <button class="keys">1</button>
-            <button class="keys">2</button>
-            <button class="keys">3</button>
-            <button class="keys" style="color: red;">+</button>
-            <button class="keys">00</button>
-            <button class="keys">0</button>
-            <button class="key1" style="color: red;">=</button>
-        </div>
+       <div class="calculator">
+
+        <form action="">
+
+            <!-- Display -->
+            <input type="text" name="display" class="display" readonly>
+
+            <!-- Calculator Keys -->
+            <div class="keys">
+
+                <input type="button" value="AC" style="color: red;" onclick="display.value=''">
+
+                <input type="button" value="DEL" style="color: red;" onclick="display.value=display.value.slice(0,-1)">
+
+                <input type="button" value="." style="color: red;" onclick="display.value+='.'">
+
+                <input type="button" value="/"  style="color: red;"onclick="display.value+='/'">
+
+
+                <input type="button" value="7" onclick="display.value+='7'">
+
+                <input type="button" value="8" onclick="display.value+='8'">
+
+                <input type="button" value="9" onclick="display.value+='9'">
+
+                <input type="button" value="*" style="color: red;" onclick="display.value+='*'">
+
+
+                <input type="button" value="4" onclick="display.value+='4'">
+
+                <input type="button" value="5" onclick="display.value+='5'">
+
+                <input type="button" value="6" onclick="display.value+='6'">
+
+                <input type="button" value="-" style="color: red;" onclick="display.value+='-'">
+
+
+                <input type="button" value="1" onclick="display.value+='1'">
+
+                <input type="button" value="2" onclick="display.value+='2'">
+
+                <input type="button" value="3" onclick="display.value+='3'">
+
+                <input type="button" value="+"  style="color: red;"onclick="display.value+='+'">
+
+
+                <input type="button" value="00" onclick="display.value+='00'">
+
+                <input type="button" value="0" onclick="display.value+='0'">
+
+                <input type="button" value="=" style="color: red;" class="equal" onclick="display.value=eval(display.value)">
+
+            </div>
+
+        </form>
 
     </div>
 
+    
+</div>
 
 
 
@@ -286,7 +319,7 @@
     // The calculator should have a user-friendly interface and should perform calculations correctly.
 
     // Ans -
-    function 
+  
 
     // Q6. YouTube Video Search Bar
 

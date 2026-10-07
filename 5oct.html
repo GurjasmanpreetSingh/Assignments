@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Login, Register & Homepage Flow Using LocalStorage</h1>
+
+    <h2>Register</h2>
+    <form onsubmit="register()"> 
+
+    <input type="text" id="name" placeholder="Full Name" required>
+    <br><br>
+
+    <input type="email" id="email" placeholder="Email" required>
+    <br><br>
+
+    <input type="password" id="password" placeholder="Password" required>
+    <br><br>
+
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+    <br><br>
+    
+
+    <button type="submit">Register</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        //Login, Register & Homepage Flow Using LocalStorage
+        // Q1. Register Page — 10 Marks
+
+        // Create a registration form containing:
+        // Full Name
+        // Email
+        // Password
+        // Confirm Password
+        // Register Button
+
+        // Ans -
+        function register() {
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            let confirmPassword = document.getElementById("confirmPassword ").value
+
+            if (password !== confirmPassword) {
+                document.getElementById("message").innerText = "Passwords do not match";
+                return;
+            }
+        }
+
+        // Q2. Login Page — 10 Marks
+
+        // Create a login form containing:
+
+        // Email
+        // Password
+        // Login Button
+        // Link to Register Page
+
+
+        // Q3. Homepage — 10 Marks
+
+        // Create a simple homepage for the logged-in user.
+
+        // Include:
+        // Navigation bar
+        // Website logo/name
+        // Welcome message
+        // User's name
+        // Some basic content/cards
+        // Logout button
+        // Example
+        // -----------------------------------------
+        //               MY WEBSITE
+        // -----------------------------------------
+
+        //               Welcome, Amit!
+
+        //         [ Card ]  [ Card ]  [ Card ]
+
+        //                     [ Logout ]
+
+        // -----------------------------------------
+
+        // The user's name should be displayed using the information stored in LocalStorage.
+
+        // Q4. Login Protection & Logout — 10 Marks
+
+        // Implement a basic authentication flow using LocalStorage.
+
+        // A. Login Protection
+
+        // If a user directly opens home.html without logging in:
+
+        // home.html
+        //     ↓
+        // Check Login Status
+        //     ↓
+        // Not Logged In
+        //     ↓
+        // Login Page
+
+        // The user should be redirected to the Login Page.
+
+        // B. Logout
+
+        // When the user clicks the Logout button:
+
+        // Remove the login status from LocalStorage.
+        // Redirect the user to the Login Page.
+        // The user should not be able to access the homepage without logging in again.
+
+        // Q5. UI Design & Complete Flow — 10 Marks
+
+        // Create a clean and attractive UI using HTML and CSS.
+    </script>
+</body>
+
+</html>
