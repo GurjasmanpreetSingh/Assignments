@@ -5,81 +5,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
+      * {
+        box-sizing: border-box;
+      }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-        }
+      body {
+        /* margin: 0; */
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+      }
 
-        h1 {
-            text-align: center;
-            margin: 30px 0;
-        }
+      h1 {
+        text-align: center;
+        margin: 30px 0;
+      }
 
-        .calculator {
-            width: 300px;
-            padding: 20px;
-            margin: auto;
-            background-color: rgb(5, 66, 110);
-            border: 2px solid black;
-            border-radius: 15px;
-        }
+      .calculator {
+        width: 300px;
+        padding: 20px;
+        margin: auto;
+        background-color: rgb(5, 66, 110);
+        border: 2px solid black;
+        border-radius: 15px;
+      }
 
-        .display {
-            width: 100%;
-            height: 55px;
+      .display {
+        width: 100%;
+        height: 55px;
 
-            border: none;
-            border-radius: 8px;
+        border: none;
+        border-radius: 8px;
 
-            background-color: white;
+        background-color: white;
 
-            text-align: right;
-            padding: 5px 10px;
+        text-align: right;
+        padding: 5px 10px;
 
-            font-size: 25px;
-            margin-bottom: 20px;
-        }
+        font-size: 25px;
+        margin-bottom: 20px;
+      }
 
-        .keys {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-        }
+      .keys {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
 
-        .keys input {
-            height: 50px;
-            border: 2px solid white;
-            border-radius: 7px;
+      .keys input {
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 7px;
 
-            background-color: white;
+        background-color: white;
 
-            font-size: 20px;
-            cursor: pointer;
-        }
+        font-size: 20px;
+        cursor: pointer;
+      }
 
-        .keys input:hover {
-            background-color: #dddddd;
-        }
+      .keys input:hover {
+        background-color: #dddddd;
+      }
 
-        .equal {
-            grid-column: span 2;
-        }
+      .equal {
+        grid-column: span 2;
+      }
+
+
+      /* Image Slider */
+      .slider {
+        width: 500px;
+        height: 400px;
+        margin: 50px auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .slides {
+        display: flex;
+      }
+
+      .slide {
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        bottom: 10px;
+        padding: 8px 15px;
+        border: 5px solid grey;
+        background-color: #423535;
+        color: white;
+        cursor: pointer;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
     </style>
-</head>
+  </head>
 
 <body>
   <h1>DOM Project based task</h1>
@@ -127,69 +166,78 @@
 
 
   <h1>Fully Functional Calculator</h1>
-       <div class="calculator">
+  <div class="calculator">
 
-        <form action="">
+    <form action="">
 
-            <!-- Display -->
-            <input type="text" name="display" class="display" readonly>
+      <input type="text" name="display" class="display">
 
-            <!-- Calculator Keys -->
-            <div class="keys">
+      <!-- Calculator Keys -->
+      <div class="keys">
 
-                <input type="button" value="AC" style="color: red;" onclick="display.value=''">
+        <input type="button" value="AC" style="color: red;" onclick="display.value=''">
 
-                <input type="button" value="DEL" style="color: red;" onclick="display.value=display.value.slice(0,-1)">
+        <input type="button" value="DEL" style="color: red;" onclick="display.value=display.value.slice(0,-1)">
 
-                <input type="button" value="." style="color: red;" onclick="display.value+='.'">
+        <input type="button" value="." style="color: red;" onclick="display.value+='.'">
 
-                <input type="button" value="/"  style="color: red;"onclick="display.value+='/'">
-
-
-                <input type="button" value="7" onclick="display.value+='7'">
-
-                <input type="button" value="8" onclick="display.value+='8'">
-
-                <input type="button" value="9" onclick="display.value+='9'">
-
-                <input type="button" value="*" style="color: red;" onclick="display.value+='*'">
+        <input type="button" value="/" style="color: red;" onclick="display.value+='/'">
 
 
-                <input type="button" value="4" onclick="display.value+='4'">
+        <input type="button" value="7" onclick="display.value+='7'">
 
-                <input type="button" value="5" onclick="display.value+='5'">
+        <input type="button" value="8" onclick="display.value+='8'">
 
-                <input type="button" value="6" onclick="display.value+='6'">
+        <input type="button" value="9" onclick="display.value+='9'">
 
-                <input type="button" value="-" style="color: red;" onclick="display.value+='-'">
-
-
-                <input type="button" value="1" onclick="display.value+='1'">
-
-                <input type="button" value="2" onclick="display.value+='2'">
-
-                <input type="button" value="3" onclick="display.value+='3'">
-
-                <input type="button" value="+"  style="color: red;"onclick="display.value+='+'">
+        <input type="button" value="*" style="color: red;" onclick="display.value+='*'">
 
 
-                <input type="button" value="00" onclick="display.value+='00'">
+        <input type="button" value="4" onclick="display.value+='4'">
 
-                <input type="button" value="0" onclick="display.value+='0'">
+        <input type="button" value="5" onclick="display.value+='5'">
 
-                <input type="button" value="=" style="color: red;" class="equal" onclick="display.value=eval(display.value)">
+        <input type="button" value="6" onclick="display.value+='6'">
 
-            </div>
+        <input type="button" value="-" style="color: red;" onclick="display.value+='-'">
 
-        </form>
+
+        <input type="button" value="1" onclick="display.value+='1'">
+
+        <input type="button" value="2" onclick="display.value+='2'">
+
+        <input type="button" value="3" onclick="display.value+='3'">
+
+        <input type="button" value="+" style="color: red;" onclick="display.value+='+'">
+
+
+        <input type="button" value="00" onclick="display.value+='00'">
+
+        <input type="button" value="0" onclick="display.value+='0'">
+
+        <input type="button" value="=" style="color: red;" class="equal" onclick="display.value=eval(display.value)">
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+  </div>
+  <br><br>
+
+
+  <h1>Image Slider</h1>
+
+  <div class="slider">
+    <div class="slides">
+      <button onclick="prev()" class="prev">Pre</button>
+      <img src="" alt="" id="img" alt="no image" style="height: 400px;width: 500px;">
+      <button onclick="next()" class="next">Next</button>
 
     </div>
-
-    
-</div>
-
-
-
+  </div>
 
 
 
@@ -318,8 +366,32 @@
 
     // The calculator should have a user-friendly interface and should perform calculations correctly.
 
-    // Ans -
-  
+    // Ans -  
+    images = [
+      //     "https://images.unsplash.com/photo-1791042146049-655617114644?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw1fHx8ZW58MHx8fHx8","https://images.unsplash.com/photo-1790997086052-1aa2b246f076?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8","https://images.unsplash.com/photo-1791114744070-f4806d5349af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D","https://images.unsplash.com/photo-1791115105982-52a387f763ad?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxM3x8fGVufDB8fHx8fA%3D%3D"
+      "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Apple.jpg?width=800", "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Marble_2002.png?width=800", "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Bridge_0002.jpg?width=800", "https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower_at_Night.jpg?width=800", "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_mapourika_NZ.jpeg?width=800"
+
+    ]
+
+
+    currentIndex = 0
+
+
+    function showImage() {
+      document.getElementById("img").src = images[currentIndex]
+
+    }
+
+    function next() {
+      currentIndex = (currentIndex + 1) % images.length
+      showImage()
+    }
+
+    function prev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length
+      showImage()
+    }
+
 
     // Q6. YouTube Video Search Bar
 
