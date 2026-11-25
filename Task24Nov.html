@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays Task 24 Nov</h1>
+    <script>
+        // Q1. Create an array of 10 numbers and use push() to add two new numbers.
+        // Ans - 
+        numbers = [1,2,3,4,5,6,7,8,9,10]
+        numbers.push(11)
+        numbers.push(12)
+        console.log(numbers)
+
+        // Output - (12) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+
+        // Q2. Create an array of 8 student names and use pop() to remove the last student.
+        // Ans - 
+        students = ["Jasman","Ishan","Karan","Adesh","Rohit","Dishant","Vishal","Anurag"]
+        students.pop()
+        console.log(students)
+
+        // Output - (7) ['Jasman', 'Ishan', 'Karan', 'Adesh', 'Rohit', 'Dishant', 'Vishal']
+
+
+        // Q3. Create an array of 5 fruits and use unshift() to add a fruit at the beginning.
+        // Ans - 
+        fruits = ["Apple","Banana","Cherry","Mango","Kiwi"]
+        fruits.unshift("Grapes")
+        console.log(fruits)
+
+        // Output - (6) ['Grapes', 'Apple', 'Banana', 'Cherry', 'Mango', 'Kiwi']
+
+
+        // Q4. Create an array of 6 colors and use shift() to remove the first color.
+        // Ans - 
+        colors = ["Red","Blue","Green","Yellow","Pink","Grey"]
+        colors.shift()
+        console.log(colors)
+
+        // Output - (5) ['Blue', 'Green', 'Yellow', 'Pink', 'Grey']
+        
+        // Q5. Create an array of numbers and use map() to create a new array containing the square of every number.
+        // Ans - 
+         numbers = [1,2,3,4,5,6,7,8,9,10]
+         sqNumber =  numbers.map(num => num * num)
+         console.log(sqNumber)
+
+        //  Output - (10) [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+        // Q6. Create an array of 15 numbers and use filter() to display only even numbers.
+        // Ans - 
+        numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        result = numbers.filter(num => num % 2 == 0)
+        console.log(result)
+
+        // Output - (7) [2, 4, 6, 8, 10, 12, 14]
+        
+
+        // Q7. Create an array of numbers and use reduce() to calculate their total sum.
+        // Ans -  
+        numbers = [1,2,3,4,5,6,7,8,9,10]
+        result = numbers.reduce((total,num) =>{
+            return total + num
+        },0)
+        console.log(result) 
+
+        // Output - 55
+
+        // Q8. Create an array of student marks and use find() to get the first student mark greater than 80.
+        // Ans -  
+        studentMarks = [51,20,63,45,50,67,73,81,99,10]
+        result = studentMarks.find(marks => marks > 80)
+        console.log(result)
+
+        // Output - 81
+
+        // Q9. Create an array of names and use includes() to check whether "Amit" exists in the array.
+        // Ans - 
+        names = ["Jasman","Ishan","Karan","Adesh","Rohit","Dishant","Vishal","Anurag"]
+        result = names.includes("Amit")
+        console.log(result)
+
+        // Output - false
+
+        // Q10. Create an array of numbers and use sort() to arrange them in ascending order.
+        // Ans - 
+        numbers = [51,20,63,45,50,67,73,81,99,10]
+        result = numbers.sort()
+        console.log(result)
+
+        // Output -  [10, 20, 45, 50, 51, 63, 67, 73, 81, 99]
+
+        // Section B – String Methods (5 Questions)
+       // Q11. Create a string containing your full name and use toUpperCase() and toLowerCase().
+    //    Ans - 
+              name = ["Gurjasmanpreet Singh"]
+              result = name.toUpperCase()
+              console.log(result)
+              result = name.toLowerCase()
+              console.log(result)
+
+            //   Output - GURJASMANPREET SINGH
+            //            gurjasmanpreet singh
+        
+        // Q12. Create a string with extra spaces and remove them using trim().
+        // Ans - 
+        string =  " Hello How Are You "                                             
+        result = string.trim()
+        console.log(result)  
+
+        // Output - Hello How Are You
+
+        // Q13. Create a string containing "JavaScript Programming" and use slice() to extract "JavaScript".
+        // Ans - 
+        string = "JavaScript Programming"
+        result = string.slice(0,10)
+        console.log(result)
+
+        // Output - JavaScript
+
+        // Q14. Create a string containing "I am learning JavaScript" and use replace() to replace "JavaScript" with "React".
+        // Ans - 
+        string = "I am learning JavaScript"
+        result = string.replace("JavaScript","React")
+        console.log(result)
+
+        // Q15. Create a string containing "HTML,CSS,JavaScript,React" and use split() to convert it into an array.
+        // Ans - 
+        language =  "HTML,CSS,JavaScript,React"
+        result = language.split(",")
+        console.log(result)
+
+        // Output - (4) ['HTML', 'CSS', 'JavaScript', 'React']
+
+        // Section C – Loops with Arrays (5 Questions)
+        // Q16. Create an array of 10 numbers and use a for loop to print all numbers.
+        // Ans - 
+         numbers = [1,2,3,4,5,6,7,8,9,10]
+         for(i = 0; i < numbers.length; i++){
+            console.log(numbers[i])
+         }
+
+        //  Output - 1,2,3,4,5,6,7,8,9,10
+
+        // Q17. Create an array of 10 numbers and use a loop to print only even numbers.
+        // Ans - 
+         numbers = [1,2,3,4,5,6,7,8,9,10]
+         for(i = 0; i < numbers.length; i++){
+            if(numbers[i] % 2 == 0){
+                console.log(numbers[i])
+            }
+         }
+
+        //  Output -  2,4,6,8,10
+
+        // Q18. Create an array of 10 numbers and use a loop to calculate the sum of all elements.
+        // Ans - 
+        numbers = [1,2,3,4,5,6,7,8,9,10]
+        total = 0
+         for(i = 0; i < numbers.length; i++){
+           total = total + numbers[i]
+         }
+         console.log(total)
+
+        //  Output - 55
+
+        // Q19. Create an array of 8 student marks and use a loop to count how many students passed. Passing marks are 40 or above.
+        // Ans - 
+         marks = [51,20,63,45,50,67,73,99]
+         count = 0
+          for(i = 0; i < marks.length; i++){
+           if(marks[i] >= 40){
+            count++
+           } 
+         }
+         console.log("No of Students Passed " + count)
+
+        //  Output - No of Students Passed 7
+
+        // Q20. Create an array of 10 numbers and use a loop to find the largest number without using Math.max().
+        // Ans -  
+         numbers = [1,2,3,4,5,6,7,8,9,10,22]
+         largest = 0
+          for(i = 0; i < numbers.length; i++){
+           if(numbers[i] > largest ){
+            largest = numbers[i]
+           } 
+         }
+         console.log(largest)
+
+        //  Output - 22
+
+        // Section D – Logical Programming Using Loops and Methods (5 Questions)
+        // Q21. Create an array of 10 numbers. Use filter() to create a new array containing numbers greater than 50.
+        // Ans - 
+        numbers = [51,20,63,45,50,67,73,99,72,91]
+        result = numbers.filter(num => num > 50)
+        console.log(result)
+
+        // Output - [51, 63, 67, 73, 99, 72, 91]
+        // Q22. Create an array of student names. Use a loop to print only names whose length is greater than 5 characters.
+        // Ans - 
+         studentNames = ["Jasman","Ishan","Karan","Adesh","Rohit","Dishant","Vishal","Anurag"]
+         for(i = 0; i < studentNames.length; i++){
+             if (studentNames[i].length > 5) {
+                console.log(studentNames[i]);
+            }
+        }
+
+        // Output  - Jasman ,Dishant ,Vishal ,Anurag
+
+        // Q23. Create an array of numbers. Use a loop to count how many numbers are positive, negative, and zero
+        // Ans - 
+        numbers = [0,20,-63,45,-50,67,-73,99,-72,0]
+        PostiveCount = 0
+        NegativeCount = 0
+        ZeroCount = 0
+        for(i = 0; i < numbers.length; i++){
+            if(numbers[i] > 0){
+               PostiveCount ++
+            } else if (numbers[i] < 0) {
+             NegativeCount ++            
+            } else{
+                ZeroCount ++
+            }
+        }
+        console.log("Positive Numbers " + PostiveCount)
+        console.log("Negative Numbers " + NegativeCount)
+        console.log("Zero Numbers " + ZeroCount)
+
+        // Positive Numbers 4,
+        // Negative Numbers 4,
+        // Zero Numbers 2
+
+        // Q24. Create an array of numbers and use reduce() to calculate the total of only even numbers.
+        // Ans - 
+        numbers = [10,20,63,45,50,67,73,99,72,100]
+        count = 0
+        allEven = numbers.reduce((total,num)=>{
+            if(num % 2 == 0){
+                return total + num
+            } else {
+                return total + 0
+            }
+        }, 0)
+        console.log(allEven)
+
+        // Output -  252
+
+        // Q25. Create an array of words. Use a loop and string methods to count how many words start with the letter "A".
+        // Ans - 
+         string = ["I","Am","learning","JavaScript","And","React"]
+         count = 0
+         for(i = 0; i < string.length; i++){
+            if(string[i].startsWith("A",[0])) {
+               count++
+            }
+        }
+        console.log(count)
+
+        // Output - 2
+
+     
+
+
+
+
+
+         
+
+
+
+
+
+
+       
+
+         
+
+
+
+        
+
+
+
+
+        
+
+        
+
+
+
+
+        
+    </script>
+</body>
+</html>
